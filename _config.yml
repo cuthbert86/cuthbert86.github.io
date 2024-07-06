@@ -1,5 +1,9 @@
-theme: jekyll-theme-minimal
-title: Cuthbert's homepage
+...
+@import "{{ Gitbook.theme }}";
+...
+
+theme: Gitbook
+title: Cuthbert's Blog
 description: Bookmark this to keep an eye on my project updates!
 
 lsi: false
