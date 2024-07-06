@@ -6,7 +6,7 @@
 theme: jekyll-theme-hacker
 title: Cuthbert's Blog
 description: Bookmark this to keep an eye on my project updates!
-
+paginate: 5
 lsi: false
 safe: true
 source: cuthbert86.github.io
