@@ -1,6 +1,7 @@
-...
+---
+---
 @import "{{ hacker.theme }}";
-...
+---
 
 theme: jekyll-theme-hacker
 title: Cuthbert's Blog
