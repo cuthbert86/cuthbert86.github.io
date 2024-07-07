@@ -1,19 +1,5 @@
----
----
-@import "{{ hacker.theme }}";
----
----
-theme: jekyll-theme-hacker
-title: "Cuthbert's Blog"
-description: Bookmark this to keep an eye on my project updates!
-paginate: 5
-lsi: false
-safe: true
-source: cuthbert86.github.io
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: Cuthbert's Blog
+description: Cuthbert is just blogging about his progress as a computer programer
