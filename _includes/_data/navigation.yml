@@ -4,3 +4,7 @@
   link: /about.html
 - name: Blog
   link: /Blog.html 
+- name: Contact
+  link: /contact.html
+= name: Hightlights
+  link: /highlight.html
