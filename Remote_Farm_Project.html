@@ -1,0 +1,34 @@
+Revised Remote Farm Project Proposal
+
+My Original goals were too many and too vague so I’ve refined them down so there aren’t as many goals but they are more worthy of investigation.  The end result might be fairly similar to my original plan for the project but only if I do most of what I originally planned as a means to end of completing the main goals.
+
+What am I really about?
+The real challenge is to find a way to collect data from a remote location without WiFi.  This is something that’s worthy of investigating and my findings will be useful for other people to learn from and build upon.  
+
+ This means that the cornerstone of my entire project is to get my LTE clipper hat module working and I aim to have that completed by this time next week.  Once that task is completed then I can work on how best to send/receive the data.  Collecting the data is more important than displaying it live, I’ve done that before and node-red is a very user friendly piece of technology.
+
+Known Issues
+There is a known bug that prevents Raspberry pi picos from using public MQTT brokers/networks.  I think I have found an as yet unknown bug that also prevents from subscribing to private brokers as well.
+This is a micro python library that can’t be imported by a normal Raspberry pi pico:  
+“from network import PPP”
+PPP is absolutely essential for the LTE clipper module to work.  Fortunately I have found a work-around, there is a local company called Pimoroni who make their own versions of picos so they have their own “pirate” version of micropython which includes the PPP protocol.
+
+Future Challenges
+
+The data from the picos in the field can’t be sent to a public broker/network so either I need to find a way to catch the data with a private MQTT broker or I need to find an alternative way to send the data.  I’m going to look into something called “urequests” and “websockets” to find out more about them.
+
+Ideally I’d like to have one pico wired into the LTE module and three other Picos sending their data back to the IOT-Hub via that Pico.  I’ve been able to get the Bluetooth functionality to half work so that could be a viable option.
+
+If there is a way of catching the data without having my raspberry pi switched on 24/7 and without messing about with my home Wifi that would be great but if that’s the only way of doing what needs to be done then so be it.
+
+Providing Value for future Students
+
+I’d really like to provide something of value for future students.  I know that this lte clipper module is a rare thing that not many people know about so I’ll try to write a how to guide on seting it up but that is dependent on actually getting it to work.
+
+Useful Resources:
+
+https://www.tomshardware.com/how-to/send-and-receive-data-raspberry-pi-pico-w-mqtt
+https://www.tomshardware.com/raspberry-pi/raspberry-pi-pico/pimoroni-clipper-4g-lte-breakout-review
+https://blog.lithings.com/gpio-connection-for-pimoroni-clipper-lte-pi-pico/
+https://shop.pimoroni.com/
+https://github.com/pimoroni
