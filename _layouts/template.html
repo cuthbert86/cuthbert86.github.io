@@ -9,19 +9,41 @@
 </head>
 <body>
     <header>
+        <section>
         <a href="index"><h1>Welcome to Cuthbert's Personal Homepage</h1></a>
-        <nav>
-            <ul>
-                <li><a href="index">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="River_Project">River Project</a></li>
-                <li><a href="Remote_Farm_Project">Remote Farm Project</a></li>
+        </section>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index">Cuthbert's Homepage</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="River_Project">River Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Remote_Farm_Project">Remote Farm Project</a>
+                </li>
             </ul>
-        </nav>
+        </div>
+    </div>
+</nav>
     </header>
     <main>
-{{ content }}
+        <h1>{{ page.title }}</h1>
+        <h1/{{ content }}</h1>
     </main>
     <footer>
         <p>&copy; 2025, Cuthbert Baines.
