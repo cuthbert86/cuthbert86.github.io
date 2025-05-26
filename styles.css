@@ -23,6 +23,11 @@ nav ul {
     padding: 0;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
 nav ul li {
     display: inline;
     margin: 0 1em;
@@ -36,6 +41,7 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
 
 main {
     padding: 2em;
@@ -59,3 +65,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
