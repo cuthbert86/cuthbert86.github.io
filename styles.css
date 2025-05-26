@@ -1,0 +1,124 @@
+		body {
+		  display: grid;
+		  place-content: center;
+		  height: 100vh;
+		  background-color: #3a0d4d;
+		  font-family: "Merriweather", serif;
+		}
+
+		div {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		}
+		div > * + * {
+		  margin-top: 4rem;
+		}
+
+		a {
+		  padding: 1rem 2rem;
+		  font-size: 1.25rem;
+		  position: relative;
+		  border: 2px solid white;
+		  color: white;
+		  background-color: transparent;
+		  text-align: center;
+		}
+
+		.border::after, .border::before,
+		.border span::after,
+		.border span::before {
+		  content: "";
+		  position: absolute;
+		  background-color: white;
+		  transition: 0.5s ease;
+		}
+		.border::after, .border::before {
+		  height: 100%;
+		  width: 2px;
+		  top: -2px;
+		}
+		.border::after {
+		  left: -2px;
+		}
+		.border::before {
+		  right: -2px;
+		}
+		.border span::after,
+		.border span::before {
+		  height: 2px;
+		  width: 100%;
+		  left: -2px;
+		}
+		.border span::after {
+		  top: -2px;
+		}
+		.border span::before {
+		  bottom: -2px;
+		}
+		.border:hover:after {
+		  transform: translatex(-12px);
+		}
+		.border:hover:before {
+		  transform: translatex(12px);
+		}
+		.border:hover span::after {
+		  transform: translatey(-12px);
+		}
+		.border:hover span::before {
+		  transform: translatey(12px);
+		}
+
+		.swap span {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  padding: 1rem 2rem;
+		  box-sizing: border-box;
+		  opacity: 0;
+		  color: black;
+		  transition: 0.35s ease;
+		}
+		.swap::before {
+		  content: "";
+		  left: 0;
+		  top: 0;
+		  position: absolute;
+		  width: 0;
+		  height: 100%;
+		  background-color: white;
+		  transition: 0.5s ease;
+		}
+		.swap:hover:before {
+		  width: 100%;
+		}
+		.swap:hover span {
+		  opacity: 1;
+		}
+
+		.future::after, .future::before {
+		  content: "";
+		  position: absolute;
+		  border: 2px solid white;
+		  width: calc(100% + 15px);
+		  height: 60px;
+		  transition: 0.5s ease;
+		}
+		.future::after {
+		  top: -15px;
+		  left: -15px;
+		  border-right: none;
+		  border-bottom: none;
+		}
+		.future::before {
+		  bottom: -15px;
+		  right: -15px;
+		  border-left: none;
+		  border-top: none;
+		}
+		.future:hover:after, .future:hover:before {
+		  width: calc(100% - 30px);
+		  height: 80px;
+		}
