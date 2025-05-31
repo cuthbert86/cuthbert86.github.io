@@ -1,12 +1,10 @@
 ---
-layout: template
+layout: template_markdown
 title: Contents Page Using Markdown
 ---
 
 
     
-
-<font color="white">
 
     
 1. [Home](index)
@@ -18,4 +16,4 @@ title: Contents Page Using Markdown
 7. [Screenshots of my Code](screenshots)
 8. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)
 9. [Live data dashboard](embeded_dashboard)
-</font>  
+  
