@@ -1,10 +1,11 @@
 ---
 layout: template
-title: Contents Page
+title: Contents Page Using Markdown
 ---
 
 
     
+<div class="link-body-emphasis">
 
 1. [Home](index)
 2. [About Me](about)
@@ -13,5 +14,6 @@ title: Contents Page
 5. [Remote Farm Project](Remote_Farm_Project)
 6. [Pico Code Showcase](PiCode_showcase)
 7. [Screenshots of my Code](screenshots)
-8. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)[Dashboard on Adafruit.io]
+8. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)
 9. [Live data dashboard](embeded_dashboard)
+</div>  
