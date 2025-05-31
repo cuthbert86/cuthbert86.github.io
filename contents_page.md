@@ -5,8 +5,10 @@ title: Contents Page Using Markdown
 
 
     
-<div class="link-body-emphasis">
 
+<font color="white">
+
+    
 1. [Home](index)
 2. [About Me](about)
 3. [Contact Page](contact)
@@ -16,4 +18,4 @@ title: Contents Page Using Markdown
 7. [Screenshots of my Code](screenshots)
 8. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)
 9. [Live data dashboard](embeded_dashboard)
-</div>  
+</font>  
