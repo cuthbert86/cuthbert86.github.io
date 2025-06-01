@@ -3,3 +3,15 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Cuthberts Homepages
 description: These are Cuthberts Homepages to show some of his work to the public.
+
+lsi: false
+safe: true
+source: cuthbert86.github.io/
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
