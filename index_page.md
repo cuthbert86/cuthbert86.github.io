@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 title: Cuthberts Homepage Using Markdown
 permalink: https://cuthbert86.github.io/index_page
 ---
