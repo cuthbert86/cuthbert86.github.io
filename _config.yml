@@ -1,6 +1,8 @@
 remote_theme: pages-themes/tactile@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme 
+  - jekyll-feed
+  - jekyll-seo-tag 
 title: Cuthberts Homepages
 description: These are Cuthberts Homepages to show some of his work to the public.
 url: https://cuthbert86.github.io/
