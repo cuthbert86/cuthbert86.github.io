@@ -1,7 +1,14 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
-</nav>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <p><a class="navbar-brand" href="index">Cuthbert's Homepages</a></p>
+  </div>
+  <div class="container-fluid">  
+    <ul class="nav nav-pills list-group-horizontal">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    </ul>
+  </div>
+ </nav>
