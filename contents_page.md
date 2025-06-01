@@ -1,5 +1,5 @@
 ---
-layout: template_markdown
+layout: default
 title: Contents Page Using Markdown
 ---
 
