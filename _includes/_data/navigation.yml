@@ -1,10 +1,8 @@
 - name: Home
-  link: /index.html
+  link: /index_page.md
 - name: About
   link: /about.html
-- name: Blog
-  link: /Blog.html 
 - name: Contact
   link: /contact.html
-= name: Hightlights
-  link: /highlight.html
+= name: Contents
+  link: /contents_page.md
