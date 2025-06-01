@@ -1,7 +1,7 @@
 ---
 layout: template
 title: Contents Page
-permalink: cuthbert86.github.io/contents_page
+permalink: /cuthbert86.github.io/contents_page
 author: Cuthbert Baines
 ---
 
