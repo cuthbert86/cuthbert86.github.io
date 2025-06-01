@@ -1,0 +1,21 @@
+collections: page
+- name: Index Page
+  link: /index_page.md
+- name: index
+  link: /index.html
+- name: About
+  link: /about.html
+- name: Contact
+  link: /contact.html
+- name: Contents Page
+  link: /contents_page.md
+- name: Contents
+  link: contents.html
+- name: River Project
+  link: /River_Project.html
+- name: Remote Farm
+  link: /Remote_Farm_Project.html
+- name: Pico Code Showcase
+  link: /PiCode_showcase.html
+- name: Adafruit.io Dashboard
+  link: "https//io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true"
