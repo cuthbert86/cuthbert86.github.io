@@ -21,9 +21,9 @@ kind of job I do in the IT sector.
 #### These are some of my projects I've workded on during the last few years:  
   
   
--[HiveMQ Repository](https://github.com/cuthbert86/HiveMQ)  
--[Django-local Repository](https://github.com/cuthbert86/Django-Local/tree/master)                  
--[Raspberry Pico Code](PiCode_showcase)  
--[River Project](River_Project)  
+- [HiveMQ Repository](https://github.com/cuthbert86/HiveMQ)  
+- [Django-local Repository](https://github.com/cuthbert86/Django-Local/tree/master)                  
+- [Raspberry Pico Code](PiCode_showcase)  
+- [River Project](River_Project)  
 
   
