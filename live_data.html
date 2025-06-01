@@ -1,0 +1,45 @@
+<script>
+const AIO_KEY = 'YOUR_AIO_KEY'; // Not safe for public repos!
+const FEED_URL = 'https://io.adafruit.com/api/v2/YOUR_USERNAME/feeds/YOUR_FEED_KEY/data?limit=20';
+
+async function fetchData() {
+  const response = await fetch(FEED_URL, {
+    headers: { 'X-AIO-Key': AIO_KEY }
+  });
+  const data = await response.json();
+  return data.map(item => ({
+    x: new Date(item.created_at),
+    y: parseFloat(item.value)
+  }));
+}
+
+async function renderChart() {
+  const dataPoints = await fetchData();
+  new Chart(document.getElementById('myChart').getContext('2d'), {
+    type: 'line',
+    data: {
+      datasets: [{
+        label: 'Live Data',
+        data: dataPoints,
+        parsing: false
+      }]
+    },
+    options: {
+      scales: {
+        x: { type: 'time', time: { unit: 'minute' } },
+        y: { beginAtZero: true }
+      }
+    }
+  });
+}
+
+renderChart();
+
+setInterval(async () => {
+const dataPoints = await fetchData();
+myChart.data.datasets[0].data = dataPoints;
+myChart.update();
+}, 10000); // every 10 seconds
+
+  
+</script>
