@@ -1,7 +1,7 @@
 ---
 layout: template
 title: Index Page
-permalink: cuthbert86.github.io/index_page
+permalink: https://cuthbert86.github.io/index_page
 author: Cuthbert Baines
 ---
 
