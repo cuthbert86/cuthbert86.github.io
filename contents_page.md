@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contents Page Using Markdown
+permalink: /https://cuthbert86.github.io/contents_page
 ---
 
 
