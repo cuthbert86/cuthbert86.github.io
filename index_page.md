@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: template
 title: Index Page
 permalink: https://cuthbert86.github.io/index_page
 author: Cuthbert Baines
