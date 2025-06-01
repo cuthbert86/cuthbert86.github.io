@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 title: Contents Page Using Markdown
 permalink: https://cuthbert86.github.io/contents_page
 ---
@@ -8,7 +8,7 @@ permalink: https://cuthbert86.github.io/contents_page
     
 
     
-1. [Home](index)
+1. [Home](index_page)
 2. [About Me](about)
 3. [Contact Page](contact)
 4. [River Project](River_Project)
