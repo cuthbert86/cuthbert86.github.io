@@ -2,6 +2,7 @@
 layout: default
 title: Index Page Using Markdown
 permalink: https://cuthbert86.github.io/index_page
+author: Cuthbert Baines
 ---
 
 
