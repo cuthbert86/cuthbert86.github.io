@@ -1,7 +1,7 @@
 ---
 layout: template
-title: Contents Page Using Markdown
-permalink: https://cuthbert86.github.io/contents_page
+title: Contents Page
+permalink: cuthbert86.github.io/contents_page
 author: Cuthbert Baines
 ---
 
