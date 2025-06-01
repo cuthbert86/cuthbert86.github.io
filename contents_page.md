@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: template
 title: Contents Page Using Markdown
 permalink: https://cuthbert86.github.io/contents_page
 author: Cuthbert Baines
