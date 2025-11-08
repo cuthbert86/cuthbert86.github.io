@@ -79,8 +79,8 @@
         }
     </style>
 </head>
-<body>
-    <div class="container-fluid p-3 mb-2 bg-info text-dark">
+<body class="bg-secondary text-white">
+    <div class="container-fluid p-3 mb-2 bg-info text-dark border border-warning"">
         <h1>Imperial Measurements Converter: Baines Services</h1>
         <div class="row justify-content-md-center">
             <label for="amount1">Amount:</label>
@@ -92,7 +92,7 @@
         </div>
         <div class="row justify-content-md-center">
             <label for="unit2">To Unit:</label>
-            <select class="form-select" id="floatingSelect" aria-label="select output"></select>
+            <select class="form-select" id="floatingSelect" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip" aria-label="select output"></select>
         </div>
         <div class="row justify-content-md-center">
             <label for="amount2">Converted Amount:</label>
