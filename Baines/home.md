@@ -1,7 +1,7 @@
 ---
 layout: template
 title: Home
-permalink: https://cuthbert86.github.io/Baines/index_page
+permalink: https://cuthbert86.github.io/Baines/home
 author: Cuthbert Baines
 ---
 
