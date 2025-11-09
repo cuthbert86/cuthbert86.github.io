@@ -1,3 +1,19 @@
-title: Cuthberts Homepages
-description: These are Cuthberts Homepages to show some of his work to the public.
-url: https://cuthbert86.github.io/
+# _config.yml for Jekyll-based GitHub Pages site
+
+title: Baines Pages  
+description: If this github pahes site is ever looking like its a bit of a mess thaats normal because this is where I try out new ways of doing web development.
+url: "https://cuthbert86.github.io"  # Replace with your actual GitHub Pages URL
+
+# Permalinks configuration
+permalink: pretty  # Makes your URLs look cleaner, e.g., /about/ instead of /about.html
+
+# Jekyll theme settings (if using a theme)
+theme: jekyll-theme-cayman
+
+# Assets and directories
+include:
+  - css
+  - js
+
+# If you want to specify a custom base URL for assets
+baseurl: ""  # Leave this empty if you're on the root directory of your Pages site
