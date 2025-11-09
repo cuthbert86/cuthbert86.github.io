@@ -1,71 +1,20 @@
-# Where things are
-source              : DIR
-destination         : DIR
-collections_dir     : .
-plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
-layouts_dir         : _layouts
-data_dir            : _data
-includes_dir        : _includes
-sass:
-  sass_dir: _sass
-collections:
-  posts:
-    output          : true
+# _config.yml for Jekyll-based GitHub Pages site
 
-# Handling Reading
-safe                : BOOL
-include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
-keep_files          : [".git", ".svn"]
-encoding            : "utf-8"
-markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
-strict_front_matter : false
+title: Baines Pages
+description: If this github pahes site is ever looking like its a bit of a mess thaats normal because this is where I try out new ways of doing web development.
+url: "https://cuthbert86.github.io"  # Replace with your actual GitHub Pages URL
 
-# Filtering Content
-show_drafts         : null
-limit_posts         : 0
-future              : false
-unpublished         : false
+# Permalinks configuration
+permalink: pretty  # Makes your URLs look cleaner, e.g., /about/ instead of /about.html
 
-# Plugins
-whitelist           : []
-plugins             : []
+# Jekyll theme settings (if using a theme)
+theme: jekyll-theme-cayman
 
-# Conversion
-markdown            : kramdown
-highlighter         : rouge
-lsi                 : false
-excerpt_separator   : "\n\n"
-incremental         : false
+# Assets and directories
+include:
+  - css
+  - js
 
-# Serving
-detach              : false
-port                : 4000
-host                : 127.0.0.1
-baseurl             : "" # does not include hostname
-show_dir_listing    : false
+# If you want to specify a custom base URL for assets
+baseurl: ""  # Leave this empty if you're on the root directory of your Pages site
 
-# Outputting
-permalink           : date
-paginate_path       : /page:num
-timezone            : null
-
-quiet               : false
-verbose             : false
-defaults            : []
-
-liquid:
-  error_mode        : warn
-  strict_filters    : false
-  strict_variables  : false
-
-# Markdown Processors
-kramdown:
-  auto_ids          : true
-  entity_output     : as_char
-  toc_levels        : [1, 2, 3, 4, 5, 6]
-  smart_quotes      : lsquo,rsquo,ldquo,rdquo
-  input             : GFM
-  hard_wrap         : false
-  footnote_nr       : 1
-  show_warnings     : false
