@@ -2,34 +2,39 @@ name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
-  id-token: write   # required for deploy-pages action according to docs :contentReference[oaicite:3]{index=3}
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      # If you have a build step (e.g., compile Sass, bundle JS), add here:
-      # - name: Build assets
-      #   run: |
-      #     npm install
-      #     npm run build
-      #   # assume build outputs to ./dist
+      # ---- Build Step (Webpack Example) ----
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-      # If no build step, skip and publish directly
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with Webpack
+        run: npm run build
+      # -------------------------------------
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './'   # or './dist' if your built site lives in dist folder
+          path: './dist'   # <-- Webpack output folder
 
   deploy:
     runs-on: ubuntu-latest
