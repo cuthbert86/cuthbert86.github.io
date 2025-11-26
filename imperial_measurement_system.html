@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Imperial Measurements Converter: Baines Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="bootstrap.js">
+    <link rel="stylesheet" href="https://github.com/cuthbert86/cuthbert86.github.io/blob/main/bootstrap.css">
+    <link rel="stylesheet" href="https://github.com/cuthbert86/cuthbert86.github.io/blob/main/styles.css">
 
     <style>
         body {
@@ -13,10 +13,10 @@
             font-family: 'Lato', 'Arial', 'sans-serif';
             margin: 0;
             padding: 0;
-            color:
+            color:blueviolet
         }
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 30px auto;
             background: #fff;
             padding: 28px 36px;
@@ -72,15 +72,69 @@
             background: #215ba6;
         }
         @media (max-width: 799px) {
-            .container { width: 90%; min-width: unset; }
+            .container { width: 97%; min-width: unset; }
             .row { flex-direction: column; }
-            .row label, .row input, .row select { width: 90%; }
+            .row label, .row input, .row select { width: 100%; }
         }
+        .dropdown button {
+            background: #262626;
+            color: #4da3ff;
+            border: 1px solid #333;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1a1a1a;
+            min-width: 180px;
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 8px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            }
+
+        .dropdown-content a {
+            color: #4da3ff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            }
+
+        .dropdown-content a:hover {
+            background-color: #333;
+            }
+
+        .show {
+            display: block;
+            }
+
     </style>
 </head>
 <body class="bg-secondary text-white">
     <div class="container-fluid p-3 mb-2 bg-info text-dark border border-warning">
         <h1>Imperial Measurements Converter: Baines Services</h1>
+        <div class="dropdown">
+    <button onclick="toggleDropdown()">More Tools ▼</button>
+    <div id="dropdown-content" class="dropdown-content">
+        <a href="#">Length Converter</a>
+        <a href="#">Weight Converter</a>
+        <a href="#">Temperature Converter</a>
+    </div>
+    </div>
         <div class="row justify-content-md-center">
             <label for="amount1">Amount:</label>
             <input type="number" id="amount1" min="0" placeholder="Enter amount">
@@ -173,6 +227,19 @@ function clearAll() {
 document.getElementById("convertBtn").addEventListener("click", convertUnits);
 document.getElementById("clearBtn").addEventListener("click", clearAll);
 
+function toggleDropdown() {
+    document.getElementById("dropdown-content").classList.toggle("show");
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown button')) {
+        const content = document.getElementById("dropdown-content");
+        if (content.classList.contains('show')) {
+            content.classList.remove('show');
+        }
+    }
+}
 </script>
 </body>
 </html>
