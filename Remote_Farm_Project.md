@@ -4,18 +4,24 @@ title: Remote Farm Project
 author: Cuthbert Baines
 ---
 
-<section>
+
+---
 <a class="link-body-emphasis" href="https://github.com/cuthbert86/Remote_Farm"><h5>Remote Farm Repository</h5></a>
-<br></br>
-<p>
+---
+        
+
+
 It is my view that in the Environmental Conservation sector and the agricultural sector it is the Biological scientists who are the most important 
 people and it is the job of the software engineers to find ways of making the most of their time and expertise.  
-</p>
-<br></br>
+        
+
+
+
 
 ## The challenge I have set myself is to investigate ways of collecting environmental data from places that do not have access to mains electricity or Wifi.
 
-<br></br>
+
+---
         
 <ul class="text-white">
         <div class="link-body-emphasis">
@@ -51,3 +57,4 @@ people and it is the job of the software engineers to find ways of making the mo
     <img src="QR code for cuthberts live data.png" alt="QR code for cuthberts live data">
     </div>
     <br></br>    
+
