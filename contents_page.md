@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Contents Page
-permalink: https://cuthbert86.github.io/contents_page
 author: Cuthbert Baines
 ---
 
@@ -19,3 +18,4 @@ author: Cuthbert Baines
 8. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)
 9. [Live data dashboard](embeded_dashboard)
   
+
