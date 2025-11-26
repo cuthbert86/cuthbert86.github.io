@@ -5,7 +5,7 @@ author: Cuthbert Baines
 ---  
 
 ---
-<br></br>
+
 # About Cuthbert Baines
 
 My name is Cuthbert Baines, I have recently completed my degree in computing at Sheffield Hallam University.  
@@ -23,7 +23,7 @@ of job I do in the IT sector.
 
 ---
 
-<br></br>
+
 
 ## A Few Of My Projects
 
@@ -46,3 +46,4 @@ Contact me: <https://github.com/cuthbert86/Bainescontact>
 
 
   
+
