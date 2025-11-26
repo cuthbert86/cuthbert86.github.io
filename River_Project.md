@@ -6,12 +6,13 @@ author: Cuthbert Baines
 
 
 
-<section>
-    <p>
+---
+
 This is where I wil show some of the highlights of the River Project I did at Hallam University last Year.  
 The best bit of computer programming I did during that project was when I made my program that I call 
 collectarray.py, that program runs so smoothly. It is rock solid.
-    </p>
+
+---
     
 <ul class="text-white">
         <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/versionmay17.py">Link to my Collect Array python program that collects data, proccesses it and sends it on</a></li>
@@ -33,5 +34,6 @@ collectarray.py, that program runs so smoothly. It is rock solid.
                 <li><a class="link-body-emphasis" href="River_Project,html">RiverProject</a></li>
             </ul>
 </section>
+
 
 
