@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="_includes/_data/js/bootstrap.js">
+    
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="bg-dark p-4">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+               <p><button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Back to homepage"><a class="navbar-brand">Cuthbert's Homepages</a></button></p>
+          </div>
+          <div class="container-fluid">  
+                <ul class="nav nav-pills list-group-horizontal">
+                    <li class="nav-item"><button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Click for the contents page"><a class="nav-link href="contents">Contents Page</a></button></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact">Contact Cuthbert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="River_Project">River Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Remote_Farm_Project">Remote Farm</a></li>
+                </ul>
+          </div>
+        </nav>
+        </div>
+    </header>
+    
+    <main>  
+        <div class="p-3 mb-2 bg-primary text-white">
+            <section>  
+                
+                <br></br>  
+                
+                <div class="text-center">
+                    <br></br>  
+
+
+                    
+                    <centre><h1>{{ page.title }}</h1></centre>
+                    <br></br>
+                    <centre>{{ content }}</centre>  
+                    
+                </div>
+            </section>  
+            
+        </div>
+    </main>  
+
+    
+    <footer>
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Click here to read the small print
+        </a>
+    </footer>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">The Small Print</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+        <p>&copy; 2025, Cuthbert Baines.
+        All rights reserved.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
