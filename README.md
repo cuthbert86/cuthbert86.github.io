@@ -1,7 +1,7 @@
 # Cuthbert's github pages site.
 
 ---
-#### Front end design isn't my specialism and I'm using this site to experiment with different web-design tools so expect this site to occasionally not work and/or look rubbish.
+#### Front end design isn't my specialism so this repository and my github.io site is a contstant work in progress.
 ---
 
 
@@ -11,6 +11,7 @@ all the major computing concepts however I never became an expert in any single 
 I mainly worked with the various Python based computing languages.  I Python for data analysis, web-development 
 (Django), collecting data with my Raspberry Pi, sending data via MQTT and the Micropython/Circuit Pytion variants
 while working with my raspberry pi picos.
+
 
 
 
