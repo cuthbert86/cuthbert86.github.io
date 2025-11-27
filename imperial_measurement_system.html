@@ -139,14 +139,14 @@
             <label for="amount1">Amount:</label>
             <input type="number" id="amount1" min="0" placeholder="Enter amount">
         </div>
-        <div class="row justify-content-md-center">
-            <label for="unit1">From Unit:</label>
-            <select class="form-select" id="floatingSelect" aria-label="select unit"></select>
-        </div>
-        <div class="row justify-content-md-center">
-            <label for="unit2">To Unit:</label>
-            <select class="form-select" id="floatingSelect" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip" aria-label="select output"></select>
-        </div>
+    <div class="row">
+        <label for="unitFrom">From Unit:</label>
+        <select id="unitFrom" class="form-select"></select>
+    </div>
+    <div class="row">
+        <label for="unitTo">To Unit:</label>
+        <select id="unitTo" class="form-select"></select>
+    </div>
         <div class="row justify-content-md-center">
             <label for="amount2">Converted Amount:</label>
             <input type="text" id="amount2" disabled>
@@ -240,6 +240,65 @@ window.onclick = function(event) {
         }
     }
 }
+// Define units for each category
+const unitsByCategory = {
+    length: ["Barleycorn", "Inch", "Foot", "Yard", "Chain", "Furlong", "Mile"],
+//    weight: ["Ounce", "Pound", "Stone", "Ton"],
+//    volume: ["Teaspoon", "Tablespoon", "Fluid Ounce", "Cup", "Pint", "Gallon"],
+//    temperature: ["Celsius", "Fahrenheit", "Kelvin"]
+};
+
+// Populate category dropdown
+function toggleCategoryDropdown() {
+    document.getElementById("categoryDropdown").classList.toggle("show");
+}
+
+document.querySelectorAll('#categoryDropdown a').forEach(item => {
+    item.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        document.getElementById("categoryButton").textContent = this.textContent + " ▼";
+        document.getElementById("categoryDropdown").classList.remove("show");
+
+        populateUnitDropdowns(category);
+    });
+});
+
+// Populate From/To unit dropdowns based on category
+function populateUnitDropdowns(category) {
+    const fromSelect = document.getElementById("unitFrom");
+    const toSelect = document.getElementById("unitTo");
+
+    fromSelect.innerHTML = "";
+    toSelect.innerHTML = "";
+
+    unitsByCategory[category].forEach(unit => {
+        const optionFrom = document.createElement("option");
+        optionFrom.value = unit;
+        optionFrom.textContent = unit;
+        fromSelect.appendChild(optionFrom);
+
+        const optionTo = document.createElement("option");
+        optionTo.value = unit;
+        optionTo.textContent = unit;
+        toSelect.appendChild(optionTo);
+    });
+
+    // Optional: select first options by default
+    fromSelect.selectedIndex = 0;
+    toSelect.selectedIndex = 1;
+}
+
+// Close dropdown if clicking outside
+window.onclick = function(event) {
+    if (!event.target.matches('#categoryButton')) {
+        const dd = document.getElementById("categoryDropdown");
+        if (dd.classList.contains('show')) dd.classList.remove('show');
+    }
+}
+
+// Initialize with Length category
+populateUnitDropdowns("length");
 </script>
 </body>
 </html>
+
