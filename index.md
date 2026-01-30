@@ -8,6 +8,7 @@ author: Cuthbert Baines
 
 # About Cuthbert Baines
 
+Site under construction
 
 My name is Cuthbert Baines, I have recently completed my degree in computing at Sheffield Hallam University.   
 I am currently looking forward to getting a proper job somewhere in the IT sector. I'm open minded about what 
