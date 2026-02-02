@@ -11,7 +11,7 @@ projects:
     tags: ["Data", "Dashboard", "Node Red"]
   - title: "Data Collection Plus MQTT"
     description: "I can collect data and send it over the internet by using a Raspberry Pi and MQTT"
-    image: "screenshot_ofpythonPart1.png", "screenshotofpythonpart2.png"
+    image: "screenshot_ofpythonPart1.png"
     url: "https://your-site.github.io/projects/simple-python-web-apps"
     repo: "https://github.com/cuthbert86/RiverProject/blob/main/coolllectarray.py"
     tags: ["Python", "Raspberry Pi", "MQTT", "RiverProject"]
