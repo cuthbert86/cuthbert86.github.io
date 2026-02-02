@@ -6,8 +6,8 @@ description: "Introducting Cuthbert Baines — selected projects and screenshots
 projects:
   - title: "Live Data Dashboard (Node-Red)"
     description: "A Dashboard that displays live sensor data from multiple sources, GPS data and has a facility for Users to input their comments"
-    image: ""
-    url: "dashboard.png"
+    image: "assets/dashboard.png"
+    url: "assets/cuthbertsflows.png"
     repo: "https://github.com/cuthbert86/RiverProject/blob/main/node-redflow.png"
     tags: ["Data", "Dashboard", "Node Red"]
   - title: "Data Collection Plus MQTT"
@@ -24,12 +24,15 @@ projects:
     tags: ["RiverProject", "Hallam University"]
 ---
 
-# Hi — I'm [Cuthbert Baines]
-Welcome! This is a small selection of projects and screenshots to give you a rapid sense of the kind of work I produce. Click any card for details, screenshots, or a link to the repo.
+# Introducing An innovative Software Engineer and Data Analyst [Cuthbert Baines]
 
-Below is a quick highlight list. To add or edit projects, update the `projects` list in this file or create project pages under `projects/` and point the `url` there.
+I can make live data dashboards with Node-Red (and other technologies as well).
+I can collect data with a Raspberry Pi (or a Pico), I've used MicroPython and CircuitPython to do it.
+I can send the dsts over the internet or via the 4G lte mobile phone network.
+I have lots of evperience using a private and public MQTT brokers so I can crsate a data hub to recieve data from multiple sources to be displayed on the same dashboard.
+I can process the live data to keep it in the correct format and ensure it's usable later on.
+I can save the data to a .csv file or a SQL database.
 
-(You can also add a short About section here in Markdown.)
 
 ---
 
