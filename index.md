@@ -8,7 +8,7 @@ projects:
     description: "A Dashboard that displays live sensor data from multiple sources, GPS data and has a facility for Users to input their comments"
     image: ""
     url: "dashboard.png"
-    repo: "RiverProject/node-redflow.png"
+    repo: "https://github.com/cuthbert86/RiverProject/blob/main/node-redflow.png"
     tags: ["Data", "Dashboard", "Node Red"]
   - title: "Data Collection Plus MQTT"
     description: "I can collect data and send it over the internet by using a Raspberry Pi and MQTT"
