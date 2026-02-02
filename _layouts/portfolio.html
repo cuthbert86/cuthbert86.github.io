@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title | default: "My Portfolio" }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="{{ "/" | relative_url }}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.github_repository_url | default: '#' }}">Source</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5 bg-primary text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="display-5">{{ page.title | default: site.title }}</h1>
+            {% if page.description %}
+              <p class="lead">{{ page.description }}</p>
+            {% endif %}
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="{{ site.github_repository_url | default: '#' }}" class="btn btn-outline-light">View source</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <section id="intro" class="mb-5">
+          <div class="row">
+            <div class="col-lg-8">
+              <!-- Render page Markdown content -->
+              <div class="prose">
+                {{ content }}
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <!-- small bio card -->
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">About</h5>
+                  <p class="card-text">Short bio or tagline. Replace this text with a short sentence about what you build.</p>
+                  <p class="mb-0"><small class="text-muted">Location · Availability</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2 class="mb-4">Selected Projects</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for project in page.projects %}
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  {% if project.image %}
+                    <img src="{{ project.image | relative_url }}" class="card-img-top" alt="{{ project.title }}">
+                  {% endif %}
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text text-muted small mb-2">{{ project.description }}</p>
+                    {% if project.tags %}
+                      <div class="mb-2">
+                        {% for t in project.tags %}
+                          <span class="badge bg-secondary me-1">{{ t }}</span>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                    <div class="mt-auto">
+                      {% if project.url %}
+                        <a href="{{ project.url }}" class="btn btn-primary btn-sm me-2" target="_blank" rel="noopener">View</a>
+                      {% endif %}
+                      {% if project.repo %}
+                        <a href="{{ project.repo }}" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">Repo</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="py-4 bg-light">
+      <div class="container text-center">
+        <small class="text-muted">© {{ site.time | date: "%Y" }} {{ site.author | default: "Your Name" }} · Built with Jekyll & Bootstrap</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
