@@ -9,7 +9,7 @@ projects:
     image: ""
     url: "dashboard.png"
     repo: "RiverProject/node-redflow.png"
-    tags: ["Data", "Dashboard", "Node-Red"]
+    tags: ["Data", "Dashboard", "Node Red"]
   - title: "Data Collection Plus MQTT"
     description: "I can collect data and send it over the internet by using a Raspberry Pi and MQTT"
     image: "screenshot_ofpythonPart1.png", "screenshotofpythonpart2.png"
