@@ -2,7 +2,6 @@
 layout: portfolio
 title: "Home"
 description: "Introducting Cuthbert Baines — selected projects and screenshots"
-# Add projects here. Each project can have: title, description, image, url, repo, tags (list)
 projects:
   - title: "Live Data Dashboard (Node-Red)"
     description: "A Dashboard that displays live sensor data from multiple sources, GPS data and has a facility for Users to input their comments"
