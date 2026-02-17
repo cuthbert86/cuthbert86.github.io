@@ -33,6 +33,7 @@ I have lots of evperience using a private and public MQTT brokers so I can crsat
 I can process the live data to keep it in the correct format and ensure it's usable later on.
 I can save the data to a .csv file or a SQL database.
 
+<a href="https://legitbainesblog.blogspot.com/">The Legit Baines Blog</a>
 
 ---
 
