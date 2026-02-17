@@ -13,6 +13,7 @@ I mainly worked with the various Python based computing languages.  I Python for
 while working with my raspberry pi picos.
 
 
+<a href="https://legitbainesblog.blogspot.com/">The Legit Baines Blog</a>
 
 
 
