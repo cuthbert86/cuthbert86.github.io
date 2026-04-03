@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: "Home"
-description: "Introducting Cuthbert Baines — selected projects and screenshots"
+description: "Introducing Cuthbert Baines — selected projects and screenshots"
 
 projects:
   - title: "Live Data Dashboard (Node-Red)"
