@@ -19,8 +19,8 @@ projects:
   - title: "River Project Portfolio"
     description: "This is the portfolio of work for the River Project, it was the best project I did at Hallam University"
     image: "assets/images/project-dataviz.png"
-    url: "https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/Portfolio%20(3).docx"
-    repo: "https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/Portfolio%20(3).docx"
+    url: "River_Project.md"
+    repo: "River_Project.md"
     tags: ["RiverProject", "Hallam University"]
 ---
 
