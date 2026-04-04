@@ -30,7 +30,7 @@ collectarray.py, that program runs so smoothly. It is rock solid.
             <ul class="text-white">
                 <li><a class="link-body-emphasis" href="HiveMQ.html">HiveMQ</a></li>
                 <li><a class="link-body-emphasis" href="PiCode_showcase.md">Raspberry PiCode</a></li>
-                <li>: <a class="link-body-emphasis" href="River_Project.md">RiverProject</a> </li>
+                <li><a class="link-body-emphasis" href="River_Project.md">RiverProject</a></li>
             </ul>
 </section>
 
