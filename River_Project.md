@@ -29,9 +29,8 @@ collectarray.py, that program runs so smoothly. It is rock solid.
         <h4>Here are some of the latest projects I've been working on:</h4>
             <ul class="text-white">
                 <li><a class="link-body-emphasis" href="HiveMQ.html">HiveMQ</a></li>
-                <li><a class="link-body-emphasis" href="Django-Local.html">Django-local</a></li>
-                <li><a class="link-body-emphasis" href="PiCode_showcase.html">Raspberry PiCode</a></li>
-                <li><a class="link-body-emphasis" href="River_Project,html">RiverProject</a></li>
+                <li><a class="link-body-emphasis" href="PiCode_showcase.md">Raspberry PiCode</a></li>
+                <li>: <a class="link-body-emphasis" href="River_Project.md">RiverProject</a> </li>
             </ul>
 </section>
 
