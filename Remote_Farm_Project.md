@@ -5,10 +5,7 @@ author: Cuthbert Baines
 ---
 
 
----
-<a class="link-body-emphasis" href="https://github.com/cuthbert86/Remote_Farm"> ### Remote Farm Repository </a>
----
-        
+### Remote Farm Repository
 
 
 It is my view that in the Environmental Conservation sector and the agricultural sector it is the Biological scientists who are the most important 
