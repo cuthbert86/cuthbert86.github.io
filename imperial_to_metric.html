@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imperial Measurements Converter: Baines Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #4b0082, #6a0dad);
+            color:blueviolet;
+            font-family: 'Lato', 'Arial', 'sans-serif';
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: white;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #212121;
+        }
+        label {
+            font-weight: bold;
+            font-size: 1.15em;
+            margin-top: 22px;
+            display: block;
+        }
+        input, select {
+            font-size: 1em;
+            padding: 8px;
+            width: 70%;
+            margin: 6px 0 20px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .row label, .row input, .row select {
+            width: 47%;
+        }
+        
+        .buttons {
+            text-align: center;
+            margin: 23px 0 10px 0;
+        }
+        
+        .buttons button {
+            background: blueviolet;
+            color: #000;
+        }
+
+        .buttons button:hover {
+            background: #215ba6;
+        }
+        @media (max-width: 799px) {
+            .container { width: 97%; min-width: unset; }
+            .row { flex-direction: column; }
+            .row label, .row input, .row select { width: 100%; }
+        }
+        .dropdown button {
+            background: #262626;
+            color: #4da3ff;
+            border: 1px solid #333;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1a1a1a;
+            min-width: 180px;
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 8px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            }
+
+        .dropdown-content a {
+            color: #4da3ff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            }
+
+        .dropdown-content a:hover {
+            background-color: #333;
+            }
+
+        .show {
+            display: block;
+            }
+
+    </style>
+</head>
+<body class="bg-secondary text-white">
+    <div class="container-fluid p-3 mb-2 bg-info text-dark border border-warning">
+        <h1>Imperial Measurements Converter: Baines Services</h1>
+        <div class="dropdown">
+    <button onclick="toggleDropdown()">More Tools ▼</button>
+    <div id="dropdown-content" class="dropdown-content">
+        <a href="#">Length Converter</a>
+        <a href="#">Weight Converter</a>
+        <a href="#">Temperature Converter</a>
+    </div>
+    </div>
+        <div class="row justify-content-md-center">
+            <label for="amount1">Amount:</label>
+            <input type="number" id="amount1" min="0" placeholder="Enter amount">
+        </div>
+        <div class="row justify-content-md-center">
+            <label for="unit1">From Unit:</label>
+            <select class="form-select" id="unit1" aria-label="select unit"></select>
+        </div>
+        <div class="row justify-content-md-center">
+            <label for="unit2">To Unit:</label>
+            <select class="form-select" id="unit2" aria-label="select unit"></select>
+        </div>
+        <div class="row justify-content-md-center">
+            <label for="amount2">Converted Amount:</label>
+            <input type="text" id="amount2" disabled>
+        </div>
+        <div class="buttons btn btn-dark">
+            <button id="convertBtn">Convert</button>
+            <button id="clearBtn" style="background:#888;">Clear All</button>
+        </div>
+    </div>
+    
+<script>
+const units = {
+    Barleycorn:     { base: 1},
+    Inch:           { base: 3},
+    Foot:           { base: 36},
+    Yard:           { base: 108},
+    Chain:          { base: 2376},
+    Furlong:        { base: 23760},
+    Mile:           { base: 190080},
+    league:         { base: 570015.58},
+    poppyseed:      { base: 0.25},
+    pica:           { base: 0.5},
+    fathom:         { base: 215.91},   
+    ramsdems_chain: { base: 3598.58},
+    nautical_mile:  { base: 0.25},
+    cubit:          { base: 53.98},
+    span:           { base: 26.99},
+    palm:           { base: 9},
+    millimetre:     { base: 0.12},
+    centimetre:     { base: 1.18},                
+    meter:          { base: 118.06},
+    killometer:     { base: 118063.75}
+};
+
+const unitNames = Object.keys(units);
+const unitSymbols = {Barleycorn:"B", Inch:"In", Foot:"F", Yard:"Y", Chain:"C", Furlong:"Fu", Mile:"m", league:"league",
+poppyseed:"pop", pica:"pica", fathom:"fa", ramsdems_chain:"Ra", nautical_mile:"knott", cubit:"cu", span:"span", palm:"palm",
+millimetre:"mil", centimetre:"cm", meter:"M", killometre:"Km"
+};
+
+function populateSelect(selectId) {
+    const select = document.getElementById(selectId);
+    select.innerHTML = '';
+    unitNames.forEach(u => {
+        const option = document.createElement('option');
+        option.value = u;
+        option.text = u;
+        select.appendChild(option);
+    });
+}
+
+populateSelect("unit1");
+populateSelect("unit2");
+document.getElementById('unit1').selectedIndex = 0;
+document.getElementById('unit2').selectedIndex = 1;
+
+function convertUnits() {
+    const amountRaw = document.getElementById("amount1").value;
+    const from = document.getElementById("unit1").value;
+    const to = document.getElementById("unit2").value;
+    const amount = parseFloat(amountRaw);
+
+    if (isNaN(amount) || amount < 0) {
+        window.alert("Please enter a valid non-negative number.");
+        document.getElementById("amount2").value = "";
+        return;
+    }
+    // Conversion: convert input amount to "Barleycorns" (base), then to target unit
+    let result = amount * units[from].base;
+    let toB = units[to].B;
+
+    // Match the original Python's way
+    // (note: you only need to divide by toB, but the original python allowed other pathways, so let's preserve the logic)
+    let newResult = null;
+    if (to === "Barleycorn")         newResult = result / units[to].base;
+    else if (to === "Inch")          newResult = result / units[to].base;
+    else if (to === "Foot")          newResult = result / units[to].base;
+    else if (to === "Yard")          newResult = result / units[to].base;
+    else if (to === "Chain")         newResult = result / units[to].base;
+    else if (to === "Furlong")       newResult = result / units[to].base;
+    else if (to === "Mile")          newResult = result / units[to].base;
+    else if (to === "league")        newResult = result / units[to].base;
+    else if (to === "poppyseed")     newResult = result / units[to].base;
+    else if (to === "pica")          newResult = result / units[to].base;
+    else if (to === "fathom")        newResult = result / units[to].base;
+    else if (to === "ramsdems_chain")newResult = result / units[to].base;
+    else if (to === "nautical_mile") newResult = result / units[to].base;
+    else if (to === "cubit")         newResult = result / units[to].base;
+    else if (to === "span")          newResult = result / units[to].base;
+    else if (to === "palm")          newResult = result / units[to].base;
+    else if (to === "millimetre")    newResult = result / units[to].base;
+    else if (to === "centimetre")    newResult = result / units[to].base;
+    else if (to === "killometetre")  newResult = result / units[to].kmbase;
+    else                             newResult = result / toB;
+
+    document.getElementById("amount2").value = newResult;
+}
+
+
+
+function clearAll() {
+    document.getElementById("amount1").value = "";
+    document.getElementById("amount2").value = "";
+    document.getElementById('unit1').selectedIndex = 0;
+    document.getElementById('unit2').selectedIndex = 1;
+}
+
+document.getElementById("convertBtn").addEventListener("click", convertUnits);
+document.getElementById("clearBtn").addEventListener("click", clearAll);
+
+function toggleDropdown() {
+    document.getElementById("dropdown-content").classList.toggle("show");
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown button')) {
+        const content = document.getElementById("dropdown-content");
+        if (content.classList.contains('show')) {
+            content.classList.remove('show');
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
