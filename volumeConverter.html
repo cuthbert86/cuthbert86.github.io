@@ -163,10 +163,19 @@ const units = {
     cup:         {base: 4800},
     pint:        {base: 9600},
     quart:       {base: 19200},
-    gallon:      {base: 76800}
+    gallon:      {base: 76800},
+    pin:         {base: 345600},
+    firkin:      {base: 691200},
+    kilderkin:   {base: 1382400},
+    barrel:      {base: 2764800},
+    puncheon:    {base: 5529600},
+    tun:         {base: 16588800},
+    hogshead:    {base: 4147200},
+    butt:        {base: 8294400}
 };
 const unitNames = Object.keys(units);
-const unitSymbols = {Minim:"M", fluid_ounce:"flz", gill:"G", cup:"c", Pint:"pt", quart:"qu", gallon:"g"};
+const unitSymbols = {Minim:"M", fluid_ounce:"flz", gill:"G", cup:"c", Pint:"pt", quart:"qu", gallon:"g", pin:"pin", firkin:"fir",
+kilderkin:"kil", barrel:"bar", puncheon:"pun", tun:"tun", hogshead:"hog", butt:"butt"};
 
 function populateSelect(selectId) {
     const select = document.getElementById(selectId);
@@ -202,14 +211,21 @@ function convertUnits() {
     // Match the original Python's way
     // (note: you only need to divide by toB, but the original python allowed other pathways, so let's preserve the logic)
     let newResult = null;
-    if (to === "Minim")      newResult = result / units[to].base;
-    else if (to === "fluid_ounce")       newResult = result / units[to].base;
-    else if (to === "gill")       newResult = result / units[to].base;
-    else if (to === "cup")       newResult = result / units[to].base;
-    else if (to === "pint")      newResult = result / units[to].base;
-    else if (to === "quart")    newResult = result / units[to].base;
-    else if (to === "gallon")       newResult = result / units[to].base;
-    else                          newResult = result / toB;
+    if (to === "Minim")                 newResult = result / units[to].base;
+    else if (to === "fluid_ounce")      newResult = result / units[to].base;
+    else if (to === "gill")             newResult = result / units[to].base;
+    else if (to === "cup")              newResult = result / units[to].base;
+    else if (to === "pint")             newResult = result / units[to].base;
+    else if (to === "quart")            newResult = result / units[to].base;
+    else if (to === "gallon")           newResult = result / units[to].base;
+    else if (to === "firkin")           newResult = result / units[to].base;
+    else if (to === "kilderkin")        newResult = result / units[to].base;
+    else if (to === "barrel")           newResult = result / units[to].base;
+    else if (to === "puncheon")         newResult = result / units[to].base;
+    else if (to === "tun")              newResult = result / units[to].base;
+    else if (to === "hogshead")         newResult = result / units[to].base;
+    else if (to === "butt")             newResult = result / units[to].base;
+    else                                newResult = result / toB;
 
     document.getElementById("amount2").value = newResult;
 }
