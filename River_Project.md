@@ -13,26 +13,23 @@ The best bit of computer programming I did during that project was when I made m
 collectarray.py, that program runs so smoothly. It is rock solid.
 
 ---
-    
-<ul class="text-white">
-        <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/versionmay17.py">Link to my Collect Array python program that collects data, proccesses it and sends it on</a></li>
-        <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/datetime1.py">Using Python to format the date/time into datetime in ISO format</a></li>
-        <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/store2.csv">I alway keep a tidy data file</a></li>
-        <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/RiverProject">Folder with different versions of my program</a></li>
-        <li><a class="link-body-emphasis" href="screenshots.html">Link to screenshots of my work</a></li>
-    </ul>
 
-</section>
+- [Link to my Collect Array python program that collects data, proccesses it and sends it on](https://github.com/cuthbert86/RiverProject/blob/main/coolllectarray.py)
+- [Using Python to format the date/time into datetime in ISO format](https://github.com/cuthbert86/RiverProject/blob/main/portfolio-20250224T133320Z-001/portfolio/datetime1.py)
+- [I alway keep a tidy data file](/ScreenshotOfMyDataFile.png)
+- [Folder with different versions of my program](https://github.com/cuthbert86/RiverProject)
+- [Link to screenshots of my work: Part 1](screenshot_ofpythonPart1.png)
+- [Link to screenshots of my work: Part 2](screenshot_ofpythonPart2.png)
+
+---
         
-<section>
-    <h2>Latest Projects</h2>
-        <h4>Here are some of the latest projects I've been working on:</h4>
-            <ul class="text-white">
-                <li><a class="link-body-emphasis" href="HiveMQ.html">HiveMQ</a></li>
-                <li><a class="link-body-emphasis" href="PiCode_showcase.md">Raspberry PiCode</a></li>
-                <li><a class="link-body-emphasis" href="River_Project.md">RiverProject</a></li>
-            </ul>
-</section>
+## Latest Projects
+
+Here are some of the latest projects I've been working on:
+
+- [HiveMQ](https://github.com/cuthbert86/PiCode/blob/Pico-code/hiveMQtest.py)
+- [Raspberry PiCode](PiCode_showcase)
+- [CircuitPython Repo](https://github.com/cuthbert86/CircuitPython)
 
 
 
