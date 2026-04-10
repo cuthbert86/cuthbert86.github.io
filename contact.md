@@ -9,9 +9,7 @@ author: Cuthbert Baines
 
 
 
-#### You can get in contact with Cuthbert by filling in a google form:
-
- [Click Here]("https://forms.google/iB6uqUzn6bpiMD9BA")
+#### You can get in contact with Cuthbert by emailing cuthbert.corp@gmail.com
 
 
 ### Latest Projects
