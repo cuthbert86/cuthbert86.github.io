@@ -40,7 +40,7 @@ I am capable of transmitting data over the internet, including via 4G LTE networ
 
 In addition, I process and structure live data to ensure it remains clean, consistent, and suitable for long-term use. I can store this data in a variety of formats, including CSV files and SQL databases, depending on project requirements.
 
-<a href="https://legitbainesblog.blogspot.com/">The Legit Baines Blog</a>
+[The Legit Baines Blog](https://legitbainesblog.blogspot.com/)
 
 ---
 
