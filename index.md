@@ -34,7 +34,7 @@ projects:
 
 I can make live data dashboards with Node-Red (and other technologies as well).
 I can collect data with a Raspberry Pi (or a Pico), I've used MicroPython and CircuitPython to do it.
-I can send the dsts over the internet or via the 4G lte mobile phone network.
+I can send the data over the internet or via the 4G lte mobile phone network.
 I have lots of evperience using a private and public MQTT brokers so I can crsate a data hub to recieve data from multiple sources to be displayed on the same dashboard.
 I can process the live data to keep it in the correct format and ensure it's usable later on.
 I can save the data to a .csv file or a SQL database.
