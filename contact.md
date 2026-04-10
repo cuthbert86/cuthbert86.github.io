@@ -11,7 +11,7 @@ author: Cuthbert Baines
 
 #### You can get in contact with Cuthbert by filling in a google form:
 
- [Click Here]("https://forms.gle/iB6uqUzn6bpiMD9BA")
+ [Click Here]("https://forms.google/iB6uqUzn6bpiMD9BA")
 
 
 ### Latest Projects
