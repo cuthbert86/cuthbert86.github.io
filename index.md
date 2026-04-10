@@ -30,16 +30,29 @@ projects:
     tags: ["RemoteFarm", "Hallam University"]
 ---
 
-# Introducing An innovative Software Engineer and Data Analyst [Cuthbert Baines]
+# Introducing an Innovative Software Engineer and Data Analyst: Cuthbert Baines
 
-I can make live data dashboards with Node-Red (and other technologies as well).
-I can collect data with a Raspberry Pi (or a Pico), I've used MicroPython and CircuitPython to do it.
-I can send the data over the internet or via the 4G lte mobile phone network.
-I have lots of evperience using a private and public MQTT brokers so I can crsate a data hub to recieve data from multiple sources to be displayed on the same dashboard.
-I can process the live data to keep it in the correct format and ensure it's usable later on.
-I can save the data to a .csv file or a SQL database.
+I am a software engineer and data analyst with a strong focus on building end-to-end data systems, from collection through to visualisation.
+
+I have experience creating live data dashboards using Node-RED and related technologies, enabling real-time monitoring and decision-making. I develop data collection solutions using Raspberry Pi and microcontrollers such as the Pico, working with both MicroPython and CircuitPython.
+
+I am capable of transmitting data over the internet, including via 4G LTE networks, allowing for flexible and remote deployments. I have extensive experience working with both private and public MQTT brokers, enabling me to design and implement scalable data hubs that aggregate information from multiple sources into a single, unified dashboard.
+
+In addition, I process and structure live data to ensure it remains clean, consistent, and suitable for long-term use. I can store this data in a variety of formats, including CSV files and SQL databases, depending on project requirements.
 
 <a href="https://legitbainesblog.blogspot.com/">The Legit Baines Blog</a>
 
 ---
 
+1. [Home](index)
+2. [About Me](about)
+3. [Contact Page](contact)
+4. [River Project](River_Project)
+5. [Remote Farm Project](Remote_Farm_Project)
+6. [Pico Code Showcase](PiCode_showcase)
+7. [Screenshots of my Code](screenshots)
+8. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)
+9. [Live data dashboard](embeded_dashboard)
+  
+
+---
