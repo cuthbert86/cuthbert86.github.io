@@ -157,16 +157,31 @@
     
 <script>
 const units = {
-    Barleycorn:  { base: 1,    B: 1,      In: 3,      F: 36,      Y: 108,     C: 2376,    Fu: 23760,   M: 190080 },
-    Inch:        { base: 3,    B: 3,      In: 1,      F: 12,      Y: 36,      C: 792,     Fu: 7920,    M: 63360  },
-    Foot:        { base: 36,   B: 36,     In: 12,     F: 1,       Y: 3,       C: 66,      Fu: 660,     M: 5280   },
-    Yard:        { base: 108,  B: 108,    In: 36,     F: 3,       Y: 1,       C: 22,      Fu: 220,     M: 1760   },
-    Chain:       { base: 2376, B: 2376,   In: 108,    F: 66,      Y: 22,      C: 1,       Fu: 10,      M: 80     },
-    Furlong:     { base: 23760,B: 23760,  In: 7920,   F: 660,     Y: 220,     C: 10,      Fu: 1,       M: 8      },
-    Mile:        { base: 190080,B:190080, In: 63360,  F: 5280,    Y: 1760,    C: 80,      Fu: 8,       M: 1      }
+    Barleycorn:     { base: 1},
+    Inch:           { base: 3},
+    Foot:           { base: 36},
+    Yard:           { base: 108},
+    Chain:          { base: 2376},
+    Furlong:        { base: 23760},
+    Mile:           { base: 190080},
+    league:         { base: 570015.58},
+    poppyseed:      { base: 0.25},
+    pica:           { base: 0.5},
+    fathom:         { base: 215.91},   
+    ramsdems_chain: { base: 3598.58},
+    nautical_mile:  { base: 0.25},
+    cubit:          { base: 53.98},
+    span:           { base: 26.99},
+    palm:           { base: 9},
+    millimetre:     { base: 0.12},
+    centimetre:     { base: 1.18},                
+    meter:          { base: 118.06},
+    killometer:     { base: 118063.75}
 };
 const unitNames = Object.keys(units);
-const unitSymbols = {Barleycorn:"B", Inch:"In", Foot:"F", Yard:"Y", Chain:"C", Furlong:"Fu", Mile:"M"};
+const unitSymbols = {Barleycorn:"B", Inch:"In", Foot:"F", Yard:"Y", Chain:"C", Furlong:"Fu", Mile:"m", league:"league",
+poppyseed:"pop", pica:"pica", fathom:"fa", ramsdems_chain:"Ra", nautical_mile:"knott", cubit:"cu", span:"span", palm:"palm",
+millimetre:"mil", centimetre:"cm", meter:"M", killometre:"Km"};
 
 function populateSelect(selectId) {
     const select = document.getElementById(selectId);
@@ -201,15 +216,27 @@ function convertUnits() {
 
     // Match the original Python's way
     // (note: you only need to divide by toB, but the original python allowed other pathways, so let's preserve the logic)
-    let newResult = null;
-    if (to === "Barleycorn")      newResult = result / units[to].base;
-    else if (to === "Inch")       newResult = result / units[to].base;
-    else if (to === "Foot")       newResult = result / units[to].base;
-    else if (to === "Yard")       newResult = result / units[to].base;
-    else if (to === "Chain")      newResult = result / units[to].base;
-    else if (to === "Furlong")    newResult = result / units[to].base;
-    else if (to === "Mile")       newResult = result / units[to].base;
-    else                          newResult = result / toB;
+   let newResult = null;
+    if (to === "Barleycorn")         newResult = result / units[to].base;
+    else if (to === "Inch")          newResult = result / units[to].base;
+    else if (to === "Foot")          newResult = result / units[to].base;
+    else if (to === "Yard")          newResult = result / units[to].base;
+    else if (to === "Chain")         newResult = result / units[to].base;
+    else if (to === "Furlong")       newResult = result / units[to].base;
+    else if (to === "Mile")          newResult = result / units[to].base;
+    else if (to === "league")        newResult = result / units[to].base;
+    else if (to === "poppyseed")     newResult = result / units[to].base;
+    else if (to === "pica")          newResult = result / units[to].base;
+    else if (to === "fathom")        newResult = result / units[to].base;
+    else if (to === "ramsdems_chain")newResult = result / units[to].base;
+    else if (to === "nautical_mile") newResult = result / units[to].base;
+    else if (to === "cubit")         newResult = result / units[to].base;
+    else if (to === "span")          newResult = result / units[to].base;
+    else if (to === "palm")          newResult = result / units[to].base;
+    else if (to === "millimetre")    newResult = result / units[to].base;
+    else if (to === "centimetre")    newResult = result / units[to].base;
+    else if (to === "killometetre")  newResult = result / units[to].base;
+    else                             newResult = result / toB;
 
     document.getElementById("amount2").value = newResult;
 }
