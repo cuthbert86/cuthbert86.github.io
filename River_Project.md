@@ -20,6 +20,8 @@ collectarray.py, that program runs so smoothly. It is rock solid.
 - [Folder with different versions of my program](https://github.com/cuthbert86/RiverProject)
 - [Link to screenshots of my work: Part 1](screenshot_ofpythonPart1.png)
 - [Link to screenshots of my work: Part 2](screenshot_ofpythonPart2.png)
+- [Screenshots](assets/screenshots.md)
+  
 
 ---
         
