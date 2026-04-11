@@ -157,22 +157,27 @@
     
 <script>
 const units = {
-    Grain:      {base: 1},
-    scruple:    {base: 20},
-    pennyweight:{base: 24},
-    dram:       {base: 27.34},
-    ounce:      {base: 437.5},
-    troy_ounce: {base: 480},
-    troy_pound: {base: 5760},
-    pound:      {base: 7000},
-    stone:      {base: 98000},
-    quarter:    {base: 196000},
-    hundredweight:{base: 784000},
-    ton:       {base: 15680000}
+    Grain:          {base: 1},
+    scruple:        {base: 20},
+    pennyweight:    {base: 24},
+    dram:           {base: 27.34},
+    ounce:          {base: 437.5},
+    troy_ounce:     {base: 480},
+    troy_pound:     {base: 5760},
+    pound:          {base: 7000},
+    stone:          {base: 98000},
+    quarter:        {base: 196000},
+    hundredweight:  {base: 784000},
+    ton:            {base: 15680000},
+    milligram:      {base: 0.02},
+    gram:           {base: 15.43},
+    killogram:      {base: 15432.36},
+    bees:           {base: 1.7}
 };
 const unitNames = Object.keys(units);
 const unitSymbols = {Grain:"G", scruple:"scruple", pennyweight:"pw", dram:"dran", ounce:"oz",
-troy_ounce:"toz", troy_ound:"tpd", pound:"Ib", stone:"st", quarter:"quarter", hundredweight:"cent", ton:"ton"};
+troy_ounce:"toz", troy_ound:"tpd", pound:"Ib", stone:"st", quarter:"quarter", hundredweight:"cent", ton:"ton",
+milligram:"mg", gram:"g", killogram:"kg", bees:"bees"};
 
 function populateSelect(selectId) {
     const select = document.getElementById(selectId);
@@ -208,19 +213,23 @@ function convertUnits() {
     // Match the original Python's way
     // (note: you only need to divide by toB, but the original python allowed other pathways, so let's preserve the logic)
     let newResult = null;
-    if (to === "Grain")                  newResult = result / units[to].base;
-    else if (to === "scruple")           newResult = result / units[to].base;
-    else if (to === "pennyweight")       newResult = result / units[to].base;
-    else if (to === "dram")              newResult = result / units[to].base;
-    else if (to === "ounce")             newResult = result / units[to].base;
-    else if (to === "troy_ounce")        newResult = result / units[to].base;
-    else if (to === "troy_pound")        newResult = result / units[to].base;
-    else if (to === "pound")             newResult = result / units[to].base;
-    else if (to === "stone")             newResult = result / units[to].base;
-    else if (to === "quarter")           newResult = result / units[to].base;
-    else if (to === "hundredweight")     newResult = result / units[to].base;
-    else if (to === "ton")               newResult = result / units[to].base;
-    else                                 newResult = result / toB;
+    if (to === "Grain")                 newResult = result / units[to].base;
+    else if (to === "scruple")          newResult = result / units[to].base;
+    else if (to === "pennyweight")      newResult = result / units[to].base;
+    else if (to === "dram")             newResult = result / units[to].base;
+    else if (to === "ounce")            newResult = result / units[to].base;
+    else if (to === "troy_ounce")       newResult = result / units[to].base;
+    else if (to === "troy_pound")       newResult = result / units[to].base;
+    else if (to === "pound")            newResult = result / units[to].base;
+    else if (to === "stone")            newResult = result / units[to].base;
+    else if (to === "quarter")          newResult = result / units[to].base;
+    else if (to === "hundredweight")    newResult = result / units[to].base;
+    else if (to === "ton")              newResult = result / units[to].base;
+    else if (to === "milligram")        newResult = result / units[to].base;
+    else if (to === "gram")             newResult = result / units[to].base;
+    else if (to === "killogram")        newResult = result / units[to].base;
+    else if (to === "bees")             newResult = result / units[to].base;    
+    else                                newResult = result / toB;
 
     document.getElementById("amount2").value = newResult;
 }
