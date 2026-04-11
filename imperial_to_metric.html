@@ -231,7 +231,7 @@ function convertUnits() {
     else if (to === "palm")          newResult = result / units[to].base;
     else if (to === "millimetre")    newResult = result / units[to].base;
     else if (to === "centimetre")    newResult = result / units[to].base;
-    else if (to === "killometetre")  newResult = result / units[to].kmbase;
+    else if (to === "killometetre")  newResult = result / units[to].base;
     else                             newResult = result / toB;
 
     document.getElementById("amount2").value = newResult;
