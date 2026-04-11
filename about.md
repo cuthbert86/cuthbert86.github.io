@@ -40,9 +40,9 @@ of job I do in the IT sector.
   
 If you'd like to collaborate or learn more about my work, feel free to reach out:
 
-Email: <cuthbert.corp@gmail.com>
-GitHub: <https://github.com/cuthbert86/Baines/home.md>  
-[Contact page](contact)
+- Email: <cuthbert.corp@gmail.com>
+- [GitHub](https://github.com/cuthbert86)
+- [Contact page](contact)
 
 
   
