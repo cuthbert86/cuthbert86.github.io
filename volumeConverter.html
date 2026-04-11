@@ -171,11 +171,13 @@ const units = {
     puncheon:    {base: 5529600},
     tun:         {base: 16588800},
     hogshead:    {base: 4147200},
-    butt:        {base: 8294400}
+    butt:        {base: 8294400},
+    millilitre:  {base: 16.89},
+    litre:       {base: 16893.64}
 };
 const unitNames = Object.keys(units);
 const unitSymbols = {Minim:"M", fluid_ounce:"flz", gill:"G", cup:"c", Pint:"pt", quart:"qu", gallon:"g", pin:"pin", firkin:"fir",
-kilderkin:"kil", barrel:"bar", puncheon:"pun", tun:"tun", hogshead:"hog", butt:"butt"};
+kilderkin:"kil", barrel:"bar", puncheon:"pun", tun:"tun", hogshead:"hog", butt:"butt", millilitre:"ml", litre:"ltr"};
 
 function populateSelect(selectId) {
     const select = document.getElementById(selectId);
@@ -225,6 +227,8 @@ function convertUnits() {
     else if (to === "tun")              newResult = result / units[to].base;
     else if (to === "hogshead")         newResult = result / units[to].base;
     else if (to === "butt")             newResult = result / units[to].base;
+    else if (to === "millilitre")       newResult = result / units[to].base;
+    else if (to === "litre")            newResult = result / units[to].base;
     else                                newResult = result / toB;
 
     document.getElementById("amount2").value = newResult;
