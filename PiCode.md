@@ -16,8 +16,8 @@ author: Cuthbert Baines
 - [Code to connect to Wfi](PiCode/connect.py)
 - [Connects to Wfi and sends data to private broker](PiCode/main.py)
 - [Code to connect to Wfi](PiCode/connect.py)
-- [River Project Repository Folder](https://github.com/cuthbert86/RiverProject)
 - [River Project Repository](https://github.com/cuthbert86/RiverProject)
+- [My own Micropython Library pf useful functions](https://github.com/cuthbert86/PiCode/blob/main/MyHelperCode.py)
 
 ---
 
