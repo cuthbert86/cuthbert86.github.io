@@ -18,7 +18,7 @@ author: Cuthbert Baines
 <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/Remote_Farm/blob/main/helper.py">Personal Micropython Library I made for myself</a></li>
 <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/PiCode/blob/main/LCD_main.py">Code to get the LCD display working</a></li>
 <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/Remote_Farm/blob/main/mqttFinallyWorking.py">Sending data via MQTT</a></li>
-<li><a class="link-body-emphasis" href="PiCode/connect.py">Code </a></li>
+<li><a class="link-body-emphasis" href="https://gist.github.com/cuthbert86/9d08a4e360ab06e8e488d30048f08352">My personal MicroPython library Code, published as a gist</a></li>
 <li><a class="link-body-emphasis" href="https://github.com/cuthbert86/RiverProject">River Project Repository</a></li>
 <li><a class="link-body-emphasis" href="portfolio-20250224T133320Z-001/portfolio">River Project Portfolio Folder</a></li>
 </ul>
