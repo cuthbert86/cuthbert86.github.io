@@ -54,6 +54,7 @@ In addition, I process and structure live data to ensure it remains clean, consi
 8. [Screenshots of my Code](assets/screenshots)
 9. [Dashboard on Adafruit.io](https://io.adafruit.com/CuthbertB/dashboards/dashboard-for-iframe?kiosk=true)
 10. [Live data dashboard](embeded_dashboard)
+11. [My Personal MicroPython Library](https://gist.github.com/cuthbert86/9d08a4e360ab06e8e488d30048f08352)
   
 
 ---
